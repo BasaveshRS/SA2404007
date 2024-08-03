@@ -43,7 +43,15 @@ My situation is i dont have the username and password of Jenkins, still i want t
 -------------------------------------------
 3. Recovering Jenkins password 
 -------------------------------------------
+cd /var/lib/jenkins/
+pwd
+ls
+config.xml
+be sudo su(root user)
+vi confing.xml
+we will see usesecurity=true so i will ask user name and password while login so make this usesecurity=false
 
+so we need t create new password do go to jenkins---->manage jenkins---->security--->security realm (none bcz we have given usesecurity=false in config.xml)---->next select jenkins own user database
 
 ----------------------------------------------
 4. Throttle Builds (Self Explore)
